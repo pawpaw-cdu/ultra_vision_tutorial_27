@@ -1,3 +1,5 @@
 build/
 logs/
 install/
+.vscode
+test.cpp
