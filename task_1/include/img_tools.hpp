@@ -1,5 +1,5 @@
 #ifndef IMG_TOOLS_HPP
-#define IMT_TOOLS_HPP
+#define IMG_TOOLS_HPP
 
 #include <opencv2/opencv.hpp>
 
@@ -19,7 +19,7 @@ namespace tool
     {
         cv::putText(img, text, point, cv::FONT_HERSHEY_SIMPLEX, font_scale, color, thickness);
     }
-    inline void show_gui(cv::Mat &img, const std::vector<cv::Point2f> &armor_points,
+    inline void draw_gui(cv::Mat &img, const std::vector<cv::Point2f> &armor_points,
                          const std::string &text, const cv::Point &point   )
     {
         draw_armor(img, armor_points);
@@ -27,13 +27,13 @@ namespace tool
         cv::resize(img, img, cv::Size(0, 0), 0.5, 0.5);
         cv::imshow("Result", img);
     }
-    inline void show_gui(cv::Mat &img, const std::vector<cv::Point2f> &armor_points)
+    inline void draw_gui(cv::Mat &img, const std::vector<cv::Point2f> &armor_points)
     {
         draw_armor(img, armor_points);
         cv::resize(img, img, cv::Size(0, 0), 0.5, 0.5);
         cv::imshow("Result", img);
     }
-    inline void show_gui(cv::Mat &img, const std::string &text, const cv::Point &point   )
+    inline void draw_gui(cv::Mat &img, const std::string &text, const cv::Point &point   )
     {
         draw_text(img, text, point);
     }

@@ -29,7 +29,7 @@ int main()
             //  4.可视化x, y, z, yaw, pitch, roll和识别出的armor
 
             //  示例
-            tool::show_gui(img,
+            tool::draw_gui(img,
                         fmt::format("Euler:  yaw{: .2f} pitch{: .2f} roll{: .2f}", 
                         dofs.euler[0], dofs.euler[1], dofs.euler[2]), 
                         cv::Point2f(10, 50));
